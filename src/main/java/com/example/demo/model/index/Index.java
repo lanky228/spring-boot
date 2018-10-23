@@ -5,17 +5,18 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-public class index {
+public class Index {
 
     @RequestMapping(value = "/index")
-    String index() {
-        System.out.println("redirect to index page!");
+    public String index() {
+        System.out.println("redirect to Index page!");
         return "index.html";
     }
 
     @RequestMapping("/")
     @ResponseBody
-    String home() {
+    public String home() {
+        System.out.println("Hello World!");
         return "Hello World!";
     }
 }
